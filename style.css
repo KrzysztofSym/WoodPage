@@ -2,8 +2,19 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
 }
 
-ul {
-    background-color: gray ;
-};
+article h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 40px;
+}
+
+li {
+    background-color: blueviolet;
+}
+
+
+/* Image replacement
+https://css-tricks.com/the-image-replacement-museum/ */

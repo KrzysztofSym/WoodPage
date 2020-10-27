@@ -6,6 +6,19 @@
 
 }
 
+.logo{
+    display: inline-block;
+    height: 50%;
+    background-size: 30%, auto;
+    background-color: cyan;
+}
+
+
+.mainHead {
+    display: inline-block;
+    background-color: brown;
+}
+
 article h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
@@ -13,6 +26,7 @@ article h1 {
 
 li {
     background-color: blueviolet;
+    display: inline-block;
 }
 
 

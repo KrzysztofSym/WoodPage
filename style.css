@@ -6,25 +6,19 @@
 
 }
 
-.logo{
-    padding: 15px;
-    height: auto;
-    float: left;
-  /* height: 166px; */
-  position:relative;
+.headerWrap{
+   display: flex;
+   align-items: center;
+   /* justify-content: space-between; */
+   min-height: 10vh;
   background-color: cyan;
 }
-.logo img {
+.headerWrap img {
         height: 50px;
-        max-width:100%;
-        float: left;
-        background-color: darkgreen;
+               background-color: darkgreen;
 }
 
 .companyName {
-    /* position: absolute; */
-    float: right;
-    line-height: 120%;
     background-color: brown;
 }
 
@@ -32,15 +26,13 @@ article h1 {
         font-family: 'Montserrat', sans-serif;
         font-size: 40px;
 }
-nav {
-    /* position: relative; */
-}
 .nav {
-  
+    display: flex;
+   list-style: none;
 }
 .nav li {
     background-color: blueviolet;
-   list-style: none;
+    padding-left: 2rem;
    }
 
 

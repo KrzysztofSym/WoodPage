@@ -6,21 +6,24 @@
 
 }
 
-.headerWrap{
+header {
    display: flex;
    align-items: center;
-   /* justify-content: space-between; */
+   justify-content: space-between;
    min-height: 10vh;
   background-color: cyan;
+  padding: 1rem 5rem;
 }
-.headerWrap img {
-        height: 50px;
-               background-color: darkgreen;
+.logoCompany {
+    display: flex;
+   align-items: center;
+font-size: 1.3em;
 }
 
-.companyName {
-    background-color: brown;
+.logoCompany img {
+        height: 50px;
 }
+
 
 article h1 {
         font-family: 'Montserrat', sans-serif;
@@ -29,11 +32,19 @@ article h1 {
 .nav {
     display: flex;
    list-style: none;
+
 }
 .nav li {
-    background-color: blueviolet;
-    padding-left: 2rem;
-   }
+    /* background-color: blueviolet; */
+    padding-right: 6rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.nav li a {
+    padding: 10px 20px;
+    text-decoration: none;
+}
 
 
 /* Image replacement

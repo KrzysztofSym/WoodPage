@@ -6,36 +6,38 @@
 
 }
 
+.landing {
+    min-height: 100vh;
+    background: url(img/Background-saw-man_1920.jpg);
+    background-size: cover;
+    background-position-y: 35%;
+    padding: 0 5rem;
+}
+
 header {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   min-height: 10vh;
-  background-color: cyan;
-  padding: 1rem 5rem;
-}
-.logoCompany {
     display: flex;
-   align-items: center;
-font-size: 1.3em;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    padding: 1rem 0;
 }
-
-.logoCompany img {
-        height: 50px;
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
 }
-
-
-article h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 40px;
+.companyName {
+    font-family: 'Oswald', sans-serif;
+}
+.logo img {
+    height: 50px;
 }
 .nav {
     display: flex;
-   list-style: none;
+    list-style: none;
 
 }
 .nav li {
-    /* background-color: blueviolet; */
     padding-right: 6rem;
     font-size: 1.2rem;
     font-weight: bold;
@@ -44,8 +46,24 @@ article h1 {
 .nav li a {
     padding: 10px 20px;
     text-decoration: none;
+    color: rgb(184, 184, 184) ;
+}
+
+article :first-child {
+    font-family: 'Dancing Script';
+    font-size: 30px;
+    margin-top: 6rem;
+    text-align: center;
+}
+article p+p {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 100px;
+    /* word-spacing: 100vw; */
+    margin-top: 2rem;
+    text-align: center;
 }
 
 
+    
 /* Image replacement
 https://css-tricks.com/the-image-replacement-museum/ */

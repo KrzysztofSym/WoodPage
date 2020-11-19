@@ -5,6 +5,13 @@
     font-family: 'Roboto', sans-serif;
 
 }
+
+/* .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+} */
+
 /* intro */
 .intro {
     min-height: 100vh;
@@ -27,6 +34,7 @@ header {
     display: flex;
     align-items: center;
     font-size: 1.2em;
+    color: rgb(184, 184, 184) ;
 }
 
 .companyName {
@@ -54,12 +62,18 @@ header {
     color: rgb(184, 184, 184) ;
 }
 
-article {
+.nav li a:hover {
+    color: #ac6839 ;
+}
+
+.slogan {
     position: absolute;
     left: 50%;
     top: 30%;
     transform: translate(-50%, -30%);
     cursor: default;
+    color: rgb(184, 184, 184) ;
+
 }
 
 article :first-child {
@@ -71,29 +85,12 @@ article :first-child {
 article p+p {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 70px;
-    /* word-spacing: 100vw; */
-    /* margin-top: 1rem; */
     text-align: center;
 }
-/* aside {
-    position: absolute;
-    left: 60%;
-    bottom: 15%;
-    margin-right: 10rem;
-    background-color: #1a1f23;
-    padding: 2rem 3rem;
-    box-shadow: 6px 6px 6px black;
-    border-radius: 10px;
 
-} */
-/* .introduction {
-    color: rgb(184, 184, 184) ;
-    text-align: justify;
-    font-size: 1.6rem;
-}*/
 .btn {
     color: rgb(184, 184, 184) ;
-    text-align: center;
+    /* color: #ac6839 ; */
     text-transform: UpperCase;
     text-decoration: none;
     font-size: 1.4rem;
@@ -102,16 +99,118 @@ article p+p {
     bottom: 20%;
     transform: translate(-50%, 0);
     background-color: #092e4d;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
 }
 
-/* Second page */
-.description h1{
-    text-align: center;
+.btn:hover {
+    color: #ac6839 ;
+    }
+
+/* Description 1 */
+.description1 {
+    background-color: #092e4d;
+    min-height: 85vh/* or 748px; */;
+}
+
+.description1 h1{
+    font-size: 2rem;
+    display: flex;
+	justify-content: center;
     align-items: center;
-
+    padding-top: 4rem;
+    color: rgb(184, 184, 184) ;
 }
+
 .decoration {
     font-family: 'Great Vibes', cursive;
     font-size: 6rem;
+    padding-right: 1rem;
+    color: #ac6839;
 }
+
+.introduction1 {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    color: rgb(184, 184, 184) ;
+}
+
+.introduction1 span {
+    width: 50%;
+    /* width: 50%; */
+    padding: 0 5rem;
+    line-height: 2rem;
+    text-align: justify;
+    position: relative;
+}
+
+hr {
+    width:70%;
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    height:1px;
+    transform: translate(-50%, 0);
+}
+
+article .bg {
+    width: 50%;
+    /* float: left; */
+    /* height: 500px; */
+    /* padding: 0 5rem; */
+    margin: 0 5rem;
+    position: relative;
+    overflow: hidden;
+    }
+
+.bg img {
+ height: 100%;
+ width: 100%;
+ position: relative;
+ left: -95%;
+ top: 0;
+ transition: 1s;
+}
+
+.active img {
+    left: 0
+}
+
+    /* position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%; */
+
+/* Description 2*/
+.description2 h1{
+    font-size: 2rem;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+}
+
+.introduction2 {
+        padding: 4rem 6rem;
+        font-size: 1.3rem;
+        text-align: justify;
+        display: flex;
+        align-items: center;
+}
+
+.introduction2 span {
+    padding: 0 5rem;
+    line-height: 2rem;
+    text-align: justify;
+    position: relative;
+}
+
+/* span img {
+    float: right;
+    height: 500px;
+    padding: 0 5rem;
+} */

@@ -28,7 +28,6 @@ header {
     justify-content: space-between;
     min-height: 10vh;
     padding: 1rem 0;
-    background-color: yellow;
     max-width: 1200px;
 }
 
@@ -255,20 +254,16 @@ article .bg1, article .bg2 {
 
 /* Footer */
 footer {
-    /* display: inline-block; */
-    /* display: flex; */
-    /* background-color: rgba(15, 15, 15, 0.664); */
-    background-color: #092e4d;
-  width: 100%;
-    /* padding: 2rem 4rem; */
-    /* flex-wrap: wrap; */
-}
-.footWrap {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1200px;
-    padding: 1rem 4rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #092e4d;
+    width: 100%;
+    padding: 2rem 4rem;
+    /* flex-wrap: wrap; */
 }
+
 
 #home {
     color: rgb(184, 184, 184) ;
@@ -285,6 +280,20 @@ footer {
 
 p + div {
     padding-left: 4rem;
+    /* background-color: tomato; */
+}
+
+a {
+    color: #ac6839 ;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.icons {
+    padding: 1rem 0;
+}
+
+.icons a+a {
+    margin-left: 2rem;
 }
 
 footer ul {

@@ -28,7 +28,8 @@ header {
     justify-content: space-between;
     min-height: 10vh;
     padding: 1rem 0;
-    max-width: 1200px;
+    /* background-color: olive; */
+    /* max-width: 1600px; */
 }
 
 .logo {
@@ -299,7 +300,6 @@ a {
 footer ul {
     display: flex;
     list-style: none;
-
 }
 
 footer ul li {
@@ -309,4 +309,35 @@ footer ul li {
 footer ul li a {
     /* padding: 10px 20px; */
     color: rgb(184, 184, 184) ;
+}
+
+/* icons */
+.background {
+    min-height: 100vh;
+    background-color: gray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(img/bill-oxford-OXGhu60NwxU-unsplash_1920.jpg);
+    background-size: cover;
+    padding: 0 5rem;
+    display: block;
+}
+
+.privacyWrap {
+    padding: 5rem 2rem;
+    color: rgb(184, 184, 184) ;
+}
+
+.privacyWrap p {
+    padding: 2rem 0;
+    /* font-size: 20px; */
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.iconPage {
+list-style: none;
+}
+
+.iconPage li {
+    padding: 0.5rem 2rem;
 }

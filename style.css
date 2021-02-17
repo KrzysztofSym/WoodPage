@@ -36,13 +36,14 @@ header {
     display: flex;
     align-items: center;
     font-size: 1.2em;
-    color: rgb(184, 184, 184) ;
 }
 
-.companyName {
-    font-family: 'Oswald', sans-serif;
-    cursor: default;
+.companyName a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: rgb(184, 184, 184)
 }
+
 
 .logo img {
     height: 50px;
@@ -256,15 +257,24 @@ article .bg1, article .bg2 {
 /* Footer */
 footer {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
     background-color: #092e4d;
     width: 100%;
-    padding: 2rem 4rem;
-    /* flex-wrap: wrap; */
+    padding: 2rem 0;
+    justify-content: center;
+   
+}
+.footWrap {
+    /* background-color: cadetblue; */
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
+.footWrap .icons {
+    width: 100%;
+    justify-content: center;
+}
 
 #home {
     color: rgb(184, 184, 184) ;
@@ -281,23 +291,28 @@ footer {
 
 p + div {
     padding-left: 4rem;
-    /* background-color: tomato; */
 }
 
-a {
+footer a, .privacyWrap a {
     color: #ac6839 ;
     text-decoration: none;
     text-transform: uppercase;
 }
 .icons {
+    display: flex;
     padding: 1rem 0;
-}
+    }
 
-.icons a+a {
+.icons * {
     margin-left: 2rem;
 }
 
+.footWrap div {
+    display: flex;
+    }
+
 footer ul {
+    padding-left: 2rem;
     display: flex;
     list-style: none;
 }
@@ -307,7 +322,6 @@ footer ul li {
 }
 
 footer ul li a {
-    /* padding: 10px 20px; */
     color: rgb(184, 184, 184) ;
 }
 
@@ -329,7 +343,6 @@ footer ul li a {
 
 .privacyWrap p {
     padding: 2rem 0;
-    /* font-size: 20px; */
     text-align: justify;
     line-height: 2rem;
 }

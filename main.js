@@ -1,4 +1,12 @@
 
+fetch("./header.html")
+.then(response => {
+  return response.text()
+})
+.then(data => {
+  document.querySelector("header").innerHTML = data;
+});
+
 const introduction1Height = document.querySelector('.introduction1').clientHeight
 const introduction1DistanceTop = document.querySelector('.introduction1').offsetTop
 const pic1 = document.querySelector('div.bg1')
@@ -21,7 +29,7 @@ function imgSlide() {
         pic1.classList.add('activePic')
         paragraph1.classList.add('activeP')
         hr1.classList.add('activeHr')
-        
+
         // console.log(introduction1DistanceTop);
         // console.log(window.innerHeight);
     };
@@ -29,7 +37,8 @@ function imgSlide() {
         pic2.classList.add('activePic')
         paragraph2.classList.add('activeP')
         hr2.classList.add('activeHr')
-        
+
         console.log('yeah');
 }}
-window.addEventListener("scroll", imgSlide)
+window.addEventListener("scroll", imgSlide);
+

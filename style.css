@@ -182,8 +182,8 @@ article .bg1, article .bg2 {
 .introduction1 span p {
     opacity: 0.01;
     left: 50%;
-    top: -80%; 
-    
+    top: -80%;
+
 }
 
 .introduction1 span p.activeP {
@@ -238,7 +238,7 @@ article .bg1, article .bg2 {
 .introduction2 span p {
     opacity: 0.01;
     left: 0;
-    top: -80%; 
+    top: -80%;
     }
 
 .introduction2 span p.activeP {
@@ -261,7 +261,7 @@ footer {
     width: 100%;
     padding: 2rem 0;
     justify-content: center;
-   
+
 }
 .footWrap {
     /* background-color: cadetblue; */
@@ -326,7 +326,7 @@ footer ul li a {
 }
 
 /* icons */
-.background {
+.iconBcg {
     min-height: 100vh;
     background-color: gray;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),

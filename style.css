@@ -354,3 +354,13 @@ list-style: none;
 .iconPage li {
     padding: 0.5rem 2rem;
 }
+
+/* AboutUs */
+.introAbout {
+    min-height: 80vh;
+    background-image: url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
+    background-size: cover;
+    background-position-y: 35%;
+    padding: 0 5rem;
+    display: block;
+}

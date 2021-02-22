@@ -7,6 +7,14 @@ fetch("./header.html")
   document.querySelector("header").innerHTML = data;
 });
 
+fetch("./footer.html")
+.then(response => {
+  return response.text()
+})
+.then(data => {
+  document.querySelector("footer").innerHTML = data;
+});
+
 const introduction1Height = document.querySelector('.introduction1').clientHeight
 const introduction1DistanceTop = document.querySelector('.introduction1').offsetTop
 const pic1 = document.querySelector('div.bg1')

@@ -74,21 +74,22 @@ header {
     left: 50%;
     top: 30%;
     transform: translate(-50%, -30%);
-    cursor: default;
     color: rgb(184, 184, 184) ;
-
+    
 }
 
 article :first-child {
     font-family: 'Dancing Script';
     font-size: 30px;
     text-align: center;
+    cursor: default;
 }
 
 article p+p {
     font-family: 'Tenor Sans', sans-serif;
     font-size: 70px;
     text-align: center;
+    cursor: default;
 }
 
 .btn {
@@ -102,6 +103,7 @@ article p+p {
     transform: translate(-50%, 0);
     background-color: #092e4d;
     padding: 1rem 3rem;
+    border-radius: 0.7rem;
 }
 
 .btn:hover {
@@ -151,10 +153,11 @@ article .bg1, article .bg2 {
 }
 
 .bg1 img, .bg2 img {
- width: 100%;
- position: relative;
- top: 0;
- transition: 1s;
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    top: 0;
+    transition: 1s;
 }
 
 .bg1 img {
@@ -336,6 +339,7 @@ footer ul li a {
     display: block;
 }
 
+
 .privacyWrap {
     padding: 5rem 2rem;
     color: rgb(184, 184, 184) ;
@@ -348,7 +352,7 @@ footer ul li a {
 }
 
 .iconPage {
-list-style: none;
+    list-style: none;
 }
 
 .iconPage li {
@@ -363,4 +367,29 @@ list-style: none;
     background-position-y: 35%;
     padding: 0 5rem;
     display: block;
+}
+
+.aboutUs {
+    margin: 4rem auto;
+    max-width: 1200px;
+    text-align: center;
+    color: rgb(184, 184, 184)
+}
+
+.aboutUs :first-child {
+    margin: 2rem auto;
+    /* text-transform: uppercase; */
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 30px;
+}
+
+.aboutUs h2 {
+    margin: 2rem auto;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 45px;
+}
+
+.aboutUs h2+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
 }

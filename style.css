@@ -28,9 +28,7 @@ header {
     justify-content: space-between;
     min-height: 10vh;
     padding: 1rem 0;
-    /* background-color: olive; */
-    /* max-width: 1600px; */
-}
+ }
 
 .logo {
     display: flex;
@@ -50,12 +48,12 @@ header {
 }
 
 .nav {
+    min-width: 50vw;
     display: flex;
     list-style: none;
-
+    justify-content: space-between;
 }
 .nav li {
-    padding-right: 6rem;
     font-weight: bold;
 }
 
@@ -70,12 +68,12 @@ header {
 }
 
 .slogan {
-    position: absolute;
+    /* position: absolute;
     left: 50%;
     top: 30%;
-    transform: translate(-50%, -30%);
-    color: rgb(184, 184, 184) ;
-    
+    transform: translate(-50%, -30%); */
+    margin: 6rem auto;
+    color: rgb(184, 184, 184);
 }
 
 article :first-child {
@@ -91,7 +89,10 @@ article p+p {
     text-align: center;
     cursor: default;
 }
-
+/* .slogan + aside {
+    margin-top: 12rem;
+    text-align: center;
+} */
 .btn {
     color: rgb(184, 184, 184) ;
     text-transform: UpperCase;
@@ -361,8 +362,9 @@ footer ul li a {
 
 /* AboutUs */
 .introAbout {
-    min-height: 80vh;
-    background-image: url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)), url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
     background-size: cover;
     background-position-y: 35%;
     padding: 0 5rem;
@@ -370,21 +372,21 @@ footer ul li a {
 }
 
 .aboutUs {
-    margin: 4rem auto;
+    margin: 6rem auto;
     max-width: 1200px;
     text-align: center;
-    color: rgb(184, 184, 184)
+    color: rgb(184, 184, 184);
+    cursor: default;
 }
 
 .aboutUs :first-child {
-    margin: 2rem auto;
-    /* text-transform: uppercase; */
+    margin: 0 auto;
     font-family: 'Dancing Script', sans-serif;
     font-size: 30px;
 }
 
 .aboutUs h2 {
-    margin: 2rem auto;
+    margin: 0 auto;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 45px;
 }
@@ -392,4 +394,5 @@ footer ul li a {
 .aboutUs h2+p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
+    margin: 2rem auto;
 }

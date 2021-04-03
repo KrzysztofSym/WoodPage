@@ -372,27 +372,33 @@ footer ul li a {
 }
 
 .aboutUs {
-    margin: 6rem auto;
+    margin: 0 auto;
+    margin-top: 6rem;
     max-width: 1200px;
     text-align: center;
     color: rgb(184, 184, 184);
     cursor: default;
 }
 
-.aboutUs :first-child {
+.aboutUs h1 {
     margin: 0 auto;
     font-family: 'Dancing Script', sans-serif;
     font-size: 30px;
+    font-weight: normal;
 }
 
 .aboutUs h2 {
     margin: 0 auto;
     font-family: 'Tenor Sans', sans-serif;
     font-size: 45px;
+    font-weight: normal;
 }
 
 .aboutUs h2+p {
     font-family: 'Roboto', sans-serif;
     font-size: 1.3rem;
-    margin: 2rem auto;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    margin-top: 1rem;
+    text-align: justify;
 }

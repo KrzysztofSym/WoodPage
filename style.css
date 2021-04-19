@@ -68,10 +68,6 @@ header {
 }
 
 .slogan {
-    /* position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -30%); */
     margin: 6rem auto;
     color: rgb(184, 184, 184);
 }
@@ -89,10 +85,8 @@ article p+p {
     text-align: center;
     cursor: default;
 }
-/* .slogan + aside {
-    margin-top: 12rem;
-    text-align: center;
-} */
+
+
 .btn {
     color: rgb(184, 184, 184) ;
     text-transform: UpperCase;
@@ -112,13 +106,16 @@ article p+p {
     }
 
 /* Description 1 */
-.description1 {
-    background-color: #092e4d;
+.description1, .description2, .description3 {
     min-height: 85vh;
     padding-bottom: 1rem;
 }
 
-.description1 h1{
+.description1{
+    background-color: #092e4d;
+}
+
+.description1 h1, .description2 h1, .description3 h1{
     font-size: 2rem;
     display: flex;
 	justify-content: center;
@@ -213,19 +210,6 @@ article .bg1, article .bg2 {
 }
 
 /* Description 2*/
-.description2 {
-    min-height: 85vh;
-    padding-bottom: 1rem;
-}
-
-.description2 h1{
-    font-size: 2rem;
-    display: flex;
-	justify-content: center;
-    align-items: center;
-    padding-top: 4rem;
-    color: rgb(184, 184, 184) ;
-}
 
 .bg2 {
     left: 50%;

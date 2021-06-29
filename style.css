@@ -6,11 +6,11 @@
 
 }
 
-.clearfix::after {
+/* .clearfix::after {
     content: "";
     clear: both;
     display: block;
-}
+} */
 
 /* intro */
 .intro {
@@ -73,7 +73,7 @@ header {
 }
 
 article :first-child {
-    font-family: 'Dancing Script';
+font-family: 'Dancing Script';
     font-size: 30px;
     text-align: center;
     cursor: default;
@@ -107,11 +107,11 @@ article p+p {
 
 /* Description 1 */
 .description1, .description2, .description3 {
-    min-height: 85vh;
-    padding-bottom: 1rem;
+    /* min-height: 85vh; */
+    padding-bottom: 4rem;
 }
 
-.description1{
+.description2{
     background-color: #092e4d;
 }
 
@@ -134,7 +134,7 @@ article p+p {
 .introduction1, .introduction2 {
     max-width: 1600px;
     width: 100%;
-    margin: 4rem auto;
+    margin-top: 4rem;
     font-size: 1.3rem;
     display: flex;
     align-items: center;
@@ -154,7 +154,7 @@ article .bg1, article .bg2 {
     width: 100%;
     border-radius: 1rem;
     position: relative;
-    top: 0;
+    /* top: 0; */
     transition: 1s;
 }
 
@@ -167,7 +167,6 @@ article .bg1, article .bg2 {
 }
 
 .introduction1 span p, .introduction2 span p {
-    /* background-color: teal; */
     display: flex;
     text-align: justify;
     align-items: center;
@@ -242,6 +241,49 @@ article .bg1, article .bg2 {
     left: 7%
 }
 
+/* Offer */
+.offer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 4rem;
+    box-sizing: border-box;
+}
+
+.offer .item {
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: calc(50% - 4rem);
+    margin: 0 2rem;
+    margin-bottom: 4rem;
+    float: left;
+}
+
+.offer .item p {
+    font-family: 'Tenor Sans', sans-serif;
+    color: rgb(184, 184, 184);
+    text-align: center;   
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.offer .item:nth-child(1) {
+    background-image: url(/img/Cabinet\ main\ nathan-oakley--peWKMDCyw4-unsplash_640.jpg);
+}
+
+.offer .item:nth-child(2) {
+    background-image: url(/img/Carpentery\ main\ -\ paul-trienekens-mLO6ILUbADA-unsplash_640.jpg);
+}
+
+.offer .item:nth-child(3) {
+    background-image: url(/img/Construction\ main\ -\ alex-mtz-ry6P4wsK2-4-unsplash_640.jpg);
+}
+
+.offer .item:nth-child(4) {
+    background-image: url(/img/Stairs\ main\ -\ robert-katzki-gwZeSWpTypY-unsplash.jpg);
+    background-position-y: top;
+}
+
 /* Footer */
 footer {
     display: flex;
@@ -252,7 +294,6 @@ footer {
 
 }
 .footWrap {
-    /* background-color: cadetblue; */
     width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -386,3 +427,5 @@ footer ul li a {
     margin-top: 1rem;
     text-align: justify;
 }
+
+

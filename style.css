@@ -278,12 +278,12 @@ article .bg1, article .bg2 {
     top: 100%;
     left: 0;
     text-decoration: none;
-    transition: 0.5s;  
+    transition: 0.5s;
 }
 .offer .item:hover p, .offer .item:hover{
 background-size: 110%;
 color: #ac6839;
-top: 96%;
+top: 98%;
 padding-bottom: 1rem;
 }
 
@@ -292,7 +292,7 @@ padding-bottom: 1rem;
     bottom: -12%;
 } */
 
-.offer a:nth-child(odd) .item {    
+.offer a:nth-child(odd) .item {
     margin-left: 4rem;
     margin-right: 2rem;
 }

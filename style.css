@@ -419,7 +419,7 @@ footer ul li a {
 }
 
 /* AboutUs */
-.introAbout {
+.introAbout, .introServices {
     min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.3)), url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
@@ -428,6 +428,15 @@ footer ul li a {
     padding: 0 5rem;
     display: block;
 }
+
+/* .introAbout {
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)), url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
+    background-size: cover;
+    background-position-y: 35%;
+    padding: 0 5rem;
+    display: block; */
 
 .aboutUs {
     margin: 0 auto;

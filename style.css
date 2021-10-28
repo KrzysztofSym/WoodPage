@@ -134,6 +134,7 @@ article p+p {
 .introduction1, .introduction2 {
     max-width: 1600px;
     width: 100%;
+    margin: 0 auto;
     margin-top: 4rem;
     font-size: 1.3rem;
     align-items: center;
@@ -436,10 +437,13 @@ footer ul li a {
 .aboutUs, .services {
     margin: 0 auto;
     margin-top: 6rem;
-    max-width: 1200px;
     text-align: center;
     color: rgb(184, 184, 184);
     cursor: default;
+}
+
+.aboutUs {
+    max-width: 1200px;
 }
 
 .aboutUs h1 {
@@ -465,4 +469,11 @@ footer ul li a {
     text-align: justify;
 }
 
+/* Services */
 
+.bg3 img {
+    display: flex;
+    width: 50%;
+    padding: 0 5rem;
+    position: relative;
+}

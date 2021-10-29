@@ -471,9 +471,42 @@ footer ul li a {
 
 /* Services */
 
-.bg3 img {
+.topService {
     display: flex;
+    margin-bottom: 2rem;
+}
+
+.topService img {
     width: 50%;
-    padding: 0 5rem;
-    position: relative;
+    padding: 0 2rem;
+}
+
+.topTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    line-height: 10rem;
+}
+
+.topTitle h1, .topTitle h2 {
+    /* display: flex; */
+    text-align: left;
+    /* position: absolute; */
+    /* height: 100%; */
+    padding: 0 2rem;
+}
+
+.topTitle h1 {
+    text-transform: uppercase;
+    /* align-items: top; */
+    font-size: 4rem;
+    /* line-height: 10rem; */
+    vertical-align: top;
+    
+}
+
+.topTitle h2 {
+    font-size: 2rem;
+    /* line-height: 3rem; */
 }

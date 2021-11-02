@@ -473,40 +473,48 @@ footer ul li a {
 
 .topService {
     display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
     margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
 }
 
-.topService img {
+.serviceImg {
+    display: flex;
     width: 50%;
+    position: relative;
     padding: 0 2rem;
+}
+
+.serviceImg img {
+    width: 100%;
+    position: relative;
 }
 
 .topTitle {
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    line-height: 10rem;
 }
 
 .topTitle h1, .topTitle h2 {
-    /* display: flex; */
+    justify-content: space-between;
+    padding: 0 4rem;
     text-align: left;
-    /* position: absolute; */
-    /* height: 100%; */
-    padding: 0 2rem;
 }
 
 .topTitle h1 {
+    line-height: 5rem;
+    max-width: 22ch;
     text-transform: uppercase;
-    /* align-items: top; */
-    font-size: 4rem;
-    /* line-height: 10rem; */
-    vertical-align: top;
+    font-size: 3rem;
+    position: relative;
+    top: 0;
     
 }
 
 .topTitle h2 {
     font-size: 2rem;
-    /* line-height: 3rem; */
+    position: absolute;
+    bottom: 0;
 }

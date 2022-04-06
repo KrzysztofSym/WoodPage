@@ -420,7 +420,7 @@ footer ul li a {
 }
 
 /* AboutUs */
-.introAbout, .introServices {
+.introAbout {
     min-height: 100vh;
     padding: 0 5rem;
     display: block;
@@ -529,3 +529,15 @@ footer ul li a {
     left: 0;
     z-index: -1;
   }
+
+  .introServices {
+    /* min-height: 100vh; */
+    padding: 0 5rem;
+    padding-bottom: 4rem;
+    display: block;
+}
+
+.cabinets {
+    padding: 10rem;
+
+}

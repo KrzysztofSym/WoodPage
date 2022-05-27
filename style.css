@@ -544,5 +544,13 @@ display: block;
 
 .slideWrapper {
     background-color: aqua;
-    
+} 
+
+.thumbnail{
+    object-fit:contain;
+    max-width: 320x;
+    max-height: 200px;
+    cursor: pointer;
+    opacity: 0.5;
+    margin: 5px;
 }

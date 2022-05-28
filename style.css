@@ -544,6 +544,10 @@ display: block;
 
 .slideWrapper {
     background-color: aqua;
+    max-width: 50vw;
+    display: flex;
+    min-height: 100px;
+    aligme
 } 
 
 .thumbnail{
@@ -553,4 +557,4 @@ display: block;
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
-}
+} 

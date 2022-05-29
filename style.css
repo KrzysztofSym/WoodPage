@@ -547,7 +547,7 @@ display: block;
     max-width: 50vw;
     display: flex;
     min-height: 100px;
-    aligme
+    align-items: center;
 } 
 
 .thumbnail{

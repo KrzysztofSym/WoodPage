@@ -1,0 +1,561 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+/* .clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+} */
+
+/* intro */
+.intro {
+    min-height: 100vh;
+    background-image: url(img/Background-saw-man_1920.jpg);
+    background-size: cover;
+    background-position-y: 35%;
+    padding: 0 5rem;
+    display: block;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 10vh;
+    /* padding: 1rem 0; */
+ }
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+.companyName a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: rgb(184, 184, 184)
+}
+
+
+.logo img {
+    height: 50px;
+}
+
+.nav {
+    min-width: 50vw;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.nav li {
+    font-weight: bold;
+}
+
+.nav li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: rgb(184, 184, 184) ;
+}
+
+.nav li a:hover {
+    color: #ac6839 ;
+}
+
+.slogan {
+    margin: 6rem auto;
+    color: rgb(184, 184, 184);
+}
+
+article :first-child {
+font-family: 'Dancing Script';
+    font-size: 30px;
+    text-align: center;
+    cursor: default;
+}
+
+article p+p {
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 70px;
+    text-align: center;
+    cursor: default;
+}
+
+
+.btn {
+    color: rgb(184, 184, 184) ;
+    text-transform: UpperCase;
+    text-decoration: none;
+    font-size: 1.4rem;
+    position: absolute;
+    left: 50%;
+    bottom: 20%;
+    transform: translate(-50%, 0);
+    background-color: #092e4d;
+    padding: 1rem 3rem;
+    border-radius: 0.7rem;
+}
+
+.btn:hover {
+    color: #ac6839 ;
+    }
+
+/* Description 1 */
+.description1, .description2, .description3 {
+    /* min-height: 85vh; */
+    padding-bottom: 4rem;
+}
+
+.description2{
+    background-color: #092e4d;
+}
+
+.description1 h1, .description2 h1, .description3 h1{
+    font-size: 2rem;
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    padding-top: 4rem;
+    color: rgb(184, 184, 184) ;
+}
+
+.decoration {
+    font-family: 'Great Vibes', cursive;
+    font-size: 6rem;
+    padding-right: 1rem;
+    color: #ac6839;
+}
+
+.introduction1, .introduction2 {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    font-size: 1.3rem;
+    align-items: center;
+    color: rgb(184, 184, 184) ;
+    overflow: hidden;
+    position: relative;
+}
+
+article .bg1, article .bg2 {
+    display: flex;
+    width: 50%;
+    padding: 0 5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg1 img, .bg2 img {
+    width: 100%;
+    border-radius: 1rem;
+    position: relative;
+    /* top: 0; */
+    transition: 1s;
+}
+
+.bg1 img {
+    left: -115%;
+}
+
+.introduction1 span, .introduction2 span  {
+     width: 50%;
+}
+
+.introduction1 span p, .introduction2 span p {
+    display: flex;
+    text-align: justify;
+    align-items: center;
+    width: 50%;
+    line-height: 2rem;
+    position: absolute;
+    height: 100%;
+    padding: 1rem 5rem;
+    transition: 1s;
+    transition-delay: 0.3s;
+}
+
+.introduction1 span p {
+    opacity: 0.01;
+    left: 50%;
+    top: -80%;
+
+}
+
+.introduction1 span p.activeP {
+    top: 0;
+    opacity: 1;
+}
+
+.introduction1 span hr, .introduction2 span hr {
+    width: 36%;
+    position: absolute;
+    height: 1px;
+    top: 20%;
+    transition: 1s;
+    transition-delay: 0.6s;
+}
+
+.introduction1 span hr {
+    left: 100%; /* 57% */
+}
+
+.introduction1 span .activeHr {
+    left: 57%
+}
+
+/* Description 2*/
+
+.bg2 {
+    left: 50%;
+}
+
+.bg2 img {
+    left: 115%;
+}
+
+.activePic img {
+    left: 0
+}
+
+.introduction2 span p {
+    opacity: 0.01;
+    left: 0;
+    top: -80%;
+    }
+
+.introduction2 span p.activeP {
+    top: 0;
+    opacity: 1;
+}
+
+.introduction2 span hr {
+    left: -50%; /* 57% */
+}
+
+.introduction2 span .activeHr {
+    left: 7%
+}
+
+/* Offer */
+.offer {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 4rem;
+}
+
+.offer a {
+    width: 100%;
+    height: 100%;
+}
+
+.offer .item {
+    display: block;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    width: calc(50% - 6rem); /*6rem = margin left + right in offer item*/
+    margin-bottom: 4rem;
+    float: left;
+    position: relative;
+    text-decoration: none;
+    background-size: 100%;
+    transition: 0.5s;
+}
+
+.offer .item p {
+    position: absolute;
+    font-family: 'Tenor Sans', sans-serif;
+    color: rgb(184, 184, 184);
+    width: 100%;
+    line-height: 1.4em;
+    cursor: pointer;
+    top: 100%;
+    left: 0;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.offer .item:hover p, .offer .item:hover{
+background-size: 110%;
+color: #ac6839;
+top: 98%;
+padding-bottom: 1rem;
+}
+
+/* .offer .item p:hover {
+    color: #ac6839;
+    bottom: -12%;
+} */
+
+.offer a:nth-child(odd) .item {
+    margin-left: 4rem;
+    margin-right: 2rem;
+}
+.offer a:nth-child(even) .item{
+    margin-left: 2rem;
+    margin-right: 4rem;
+}
+.offer a:nth-child(1) .item{
+    background-image: url(/img/Cabinet\ main\ nathan-oakley--peWKMDCyw4-unsplash_640.jpg);
+}
+
+.offer a:nth-child(2) .item{
+    background-image: url(/img/Carpentery\ main\ -\ paul-trienekens-mLO6ILUbADA-unsplash_640.jpg);
+}
+
+.offer a:nth-child(3) .item{
+    background-image: url(/img/Construction\ main\ -\ alex-mtz-ry6P4wsK2-4-unsplash_640.jpg);
+}
+
+.offer a:nth-child(4) .item{
+    background-image: url(/img/Stairs\ main\ -\ robert-katzki-gwZeSWpTypY-unsplash.jpg);
+    background-position-y: top;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    background-color: #092e4d;
+    width: 100%;
+    padding: 2rem 0;
+    justify-content: center;
+
+}
+.footWrap {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footWrap .icons {
+    width: 100%;
+    justify-content: center;
+}
+
+#home {
+    color: rgb(184, 184, 184) ;
+    margin: 0 auto;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+.break {
+    flex-basis: 100%;
+    width: 100%;
+    height: 0;
+}
+
+p + div {
+    padding-left: 4rem;
+}
+
+footer a, .privacyWrap a {
+    color: #ac6839 ;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.icons {
+    display: flex;
+    padding: 1rem 0;
+    }
+
+.icons * {
+    margin-left: 2rem;
+}
+
+.footWrap div {
+    display: flex;
+    }
+
+footer ul {
+    padding-left: 2rem;
+    display: flex;
+    list-style: none;
+}
+
+footer ul li {
+    padding: 0 30px;
+}
+
+footer ul li a {
+    color: rgb(184, 184, 184) ;
+}
+
+/* icons */
+.iconBcg {
+    min-height: 100vh;
+    background-color: gray;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(img/bill-oxford-OXGhu60NwxU-unsplash_1920.jpg);
+    background-size: cover;
+    padding: 0 5rem;
+    display: block;
+}
+
+
+.privacyWrap {
+    padding: 5rem 2rem;
+    color: rgb(184, 184, 184) ;
+}
+
+.privacyWrap p {
+    padding: 2rem 0;
+    text-align: justify;
+    line-height: 2rem;
+}
+
+.iconPage {
+    list-style: none;
+}
+
+.iconPage li {
+    padding: 0.5rem 2rem;
+}
+
+/* AboutUs */
+.introAbout {
+    min-height: 100vh;
+    padding: 0 5rem;
+    display: block;
+}
+
+ .introAbout {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)), url(img/AboutBcg_ian-schneider-IQbC4VU4YPQ-unsplash_1920.jpg);
+    background-size: cover;
+    background-position-y: 35%;
+ }
+
+.aboutUs, .services {
+    margin: 0 auto;
+    text-align: center;
+    color: rgb(184, 184, 184);
+    cursor: default;
+}
+
+.aboutUs {
+    max-width: 1200px;
+    margin-top: 6rem;
+}
+
+.aboutUs h1 {
+    margin: 0 auto;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.aboutUs h2 {
+    margin: 0 auto;
+    font-family: 'Tenor Sans', sans-serif;
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.aboutUs h2+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    margin-top: 1rem;
+    text-align: justify;
+}
+
+/* Services */
+
+.topService {
+    display: flex;
+    max-width: 1600px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.serviceImg {
+    display: flex;
+    width: 50%;
+    position: relative;
+    padding: 0 2rem;
+}
+
+.serviceImg img {
+    width: 100%;
+    position: relative;
+}
+
+.topTitle {
+    width: 50%;
+    display: flex;
+    /* position: relative; */
+}
+
+.topTitle h1, .topTitle h2 {
+    justify-content: space-between;
+    padding: 0 4rem;
+    text-align: left;
+}
+
+.topTitle h1 {
+    line-height: 4rem;
+    max-width: 22ch;
+    text-transform: uppercase;
+    font-size: 3rem;
+    position: relative;
+    top: calc(-0.75rem);
+}
+
+.topTitle h2 {
+    font-size: 2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.header{
+    background-color: #092e4d;
+    padding: 0 5rem;
+    }
+
+  .introServices {
+    min-height: 90vh;
+    padding: auto 5rem;
+   
+    display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* Cabinets */
+.cabinets {
+padding: 0 5rem;
+}
+
+.cabinetsImg {
+float: right;
+display: block;
+}
+
+.slideWrapper {
+    background-color: aqua;
+    max-width: 50vw;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+} 
+
+.thumbnail{
+    object-fit:contain;
+    max-width: 320x;
+    max-height: 200px;
+    cursor: pointer;
+    opacity: 0.5;
+    margin: 5px;
+} 

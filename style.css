@@ -551,6 +551,27 @@ display: block;
     align-items: center;
 } 
 
+/* slider need to be checked */
+.slider {
+    width: 5400px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.arrow {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.arrow:hover {
+    opacity: 0.5;
+    width: 35px;
+    height: 35px;
+}
+
 .thumbnail{
     object-fit:contain;
     max-width: 320x;

@@ -543,18 +543,20 @@ float: right;
 display: block;
 }
 
+/* slider need to be checked */
 .slideWrapper {
-    background-color: aqua;
     max-width: 50vw;
     display: flex;
-    min-height: 100px;
+    /* min-height: 100px; */
     align-items: center;
+    justify-content: center;
 } 
 
-/* slider need to be checked */
 .slider {
     width: 5400px;
+    min-height: 230px;
     display: flex;
+    align-items: center;
     flex-wrap: nowrap;
     overflow-x: hidden;
 }
@@ -579,4 +581,12 @@ display: block;
     cursor: pointer;
     opacity: 0.5;
     margin: 5px;
+    transition: .3s;
 } 
+
+.thumbnail:hover{
+	opacity:1;
+    max-width: 340x;
+    max-height: 220px;
+   
+}

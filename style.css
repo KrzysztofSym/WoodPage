@@ -610,3 +610,8 @@ border-radius: 100px;
 .slider::-webkit-scrollbar-thumb:hover{
 background-color: #18b5ce;
 }
+
+/* need to be deleted */
+.slider {
+    background-color: #092e4d;
+}

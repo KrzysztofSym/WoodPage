@@ -564,8 +564,12 @@ display: block;
 .arrow {
     width: 30px;
     height: 30px;
+    padding: 5px;
     cursor: pointer;
     transition: .3s;
+}
+  .left  {
+    transform:rotate(180deg);
 }
 
 .arrow:hover {
@@ -611,7 +615,3 @@ border-radius: 100px;
 background-color: #18b5ce;
 }
 
-/* need to be deleted */
-.slider {
-    background-color: #092e4d;
-}

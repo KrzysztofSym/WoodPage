@@ -69,3 +69,15 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 				document.getElementById('featured').src = this.src
 			})
 		}
+
+    let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementByClassName('slider').scrollLeft -= 180
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementByClassName('slider').scrollLeft += 180
+		})
+

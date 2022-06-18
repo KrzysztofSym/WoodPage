@@ -45,8 +45,6 @@ function imgSlide() {
         pic2.classList.add('activePic')
         paragraph2.classList.add('activeP')
         hr2.classList.add('activeHr')
-
-        console.log('yeah');
 }}
 window.addEventListener("scroll", imgSlide);
 
@@ -74,7 +72,8 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 		let buttonLeft = document.getElementById('slideLeft');
 
 		buttonLeft.addEventListener('click', function(){
-			document.getElementByClassName('slider').scrollLeft -= 180
+			document.getElementByClassName('slider').scrollLeft -= 180;
+      console.log("try")
 		})
 
 		buttonRight.addEventListener('click', function(){

@@ -133,6 +133,7 @@ article p+p {
 
 .introduction1, .introduction2 {
     max-width: 1600px;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     margin-top: 4rem;
@@ -527,7 +528,7 @@ footer ul li a {
   .introServices {
     min-height: 90vh;
     padding: auto 5rem;
-   
+
     display: flex;
 align-items: center;
 justify-content: center;
@@ -550,7 +551,7 @@ display: block;
     /* min-height: 100px; */
     align-items: center;
     justify-content: center;
-} 
+}
 
 .slider {
     width: 5400px;
@@ -586,7 +587,7 @@ display: block;
     opacity: 0.5;
     margin: 5px;
     transition: .3s;
-} 
+}
 
 .thumbnail:hover{
 	opacity:1;

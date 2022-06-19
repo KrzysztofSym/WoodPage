@@ -41,12 +41,13 @@ function imgSlide() {
         // console.log(introduction1DistanceTop);
         // console.log(window.innerHeight);
     };
-    if ((scrollSize > (introduction2DistanceTop - window.innerHeight * 0.6)) && (pic2.classList.contains('active') !== true)) {
-        pic2.classList.add('activePic')
-        paragraph2.classList.add('activeP')
-        hr2.classList.add('activeHr')
 
-        console.log('yeah');
-}}
-window.addEventListener("scroll", imgSlide);
+    // check why it doesn't work
+//     if ((scrollSize > (introduction2DistanceTop - window.innerHeight * 0.6)) && (pic2.classList.contains('active') !== true)) {
+//         pic2.classList.add('activePic')
+//         paragraph2.classList.add('activeP')
+//         hr2.classList.add('activeHr')
 
+//         console.log('yeah');
+// }}
+// window.addEventListener("scroll", imgSlide);

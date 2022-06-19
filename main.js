@@ -42,12 +42,43 @@ function imgSlide() {
         // console.log(window.innerHeight);
     };
 
-    // check why it doesn't work
-//     if ((scrollSize > (introduction2DistanceTop - window.innerHeight * 0.6)) && (pic2.classList.contains('active') !== true)) {
-//         pic2.classList.add('activePic')
-//         paragraph2.classList.add('activeP')
-//         hr2.classList.add('activeHr')
+    if ((scrollSize > (introduction2DistanceTop - window.innerHeight * 0.6)) && (pic2.classList.contains('active') !== true)) {
+        pic2.classList.add('activePic')
+        paragraph2.classList.add('activeP')
+        hr2.classList.add('activeHr')
+}}
+window.addEventListener("scroll", imgSlide);
 
-//         console.log('yeah');
-// }}
-// window.addEventListener("scroll", imgSlide);
+// Cabinet slider
+let thumbnails = document.getElementsByClassName('thumbnail')
+
+		let activeImages = document.getElementsByClassName('active')
+
+		for (let i=0; i < thumbnails.length; i++){
+
+			thumbnails[i].addEventListener('mouseover', function(){
+				console.log(activeImages)
+
+				if (activeImages.length > 0){
+					activeImages[0].classList.remove('active')
+				}
+
+
+				this.classList.add('active')
+				document.getElementById('featured').src = this.src
+			})
+		}
+
+    let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
+
+		buttonLeft.addEventListener('click', function(){
+			document.getElementByClassName('slider').scrollLeft -= 180;
+      console.log("try")
+		})
+
+		buttonRight.addEventListener('click', function(){
+			document.getElementByClassName('slider').scrollLeft += 180
+		})
+
+//need to check this file

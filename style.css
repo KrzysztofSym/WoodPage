@@ -553,6 +553,14 @@ display: block;
     justify-content: center;
 }
 
+#featured {
+    max-width: 500px;
+    max-height: 600px;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: blue;
+}
+
 .slider {
     width: 5400px;
     min-height: 230px;

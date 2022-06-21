@@ -69,8 +69,8 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 			})
 		}
 
-    let buttonRight = document.getElementById('slideRight');
-		let buttonLeft = document.getElementById('slideLeft');
+    let buttonRight = document.getElementByClassName('right');
+		let buttonLeft = document.getElementByClassName('left');
 
 		buttonLeft.addEventListener('click', function(){
 			document.getElementByClassName('slider').scrollLeft -= 180;

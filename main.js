@@ -16,6 +16,7 @@ fetch("./footer.html")
 });
 
 const introduction1Height = document.querySelector('.introduction1').clientHeight
+// const introduction1Height = document.querySelector('.introduction1').style.backgroundColor = "blue"
 const introduction1DistanceTop = document.querySelector('.introduction1').offsetTop
 const pic1 = document.querySelector('div.bg1')
 const paragraph1 = document.querySelector('.introduction1 span p')
@@ -69,16 +70,16 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 			})
 		}
 
-    let buttonRight = document.getElementByClassName('right');
-		let buttonLeft = document.getElementByClassName('left');
+    let buttonRight = document.querySelector('right');
+		let buttonLeft = document.querySelector('left');
 
 		buttonLeft.addEventListener('click', function(){
-			document.getElementByClassName('slider').scrollLeft -= 180;
-      console.log("try")
+			document.querySelector('slider').scrollLeft -= 180;
+      console.log(buttonLeft)
 		})
 
 		buttonRight.addEventListener('click', function(){
-			document.getElementByClassName('slider').scrollLeft += 180
+			document.querySelector('slider').scrollLeft += 180
 		})
 
 //need to check this file

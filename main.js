@@ -15,14 +15,14 @@ fetch("./footer.html")
   document.querySelector("footer").innerHTML = data;
 });
 
-const introduction1Height = document.querySelector('.introduction1').clientHeight
-// const introduction1Height = document.querySelector('.introduction1').style.backgroundColor = "blue"
-const introduction1DistanceTop = document.querySelector('.introduction1').offsetTop
+const introduction1Height = document.querySelectorAll('.introduction1').clientHeight
+// const introduction1Height = document.querySelectorAll('.introduction1').style.backgroundColor = "blue"
+const introduction1DistanceTop = document.querySelectorAll('.introduction1').offsetTop
 const pic1 = document.querySelector('div.bg1')
 const paragraph1 = document.querySelector('.introduction1 span p')
 const hr1 = document.querySelector('.introduction1 span hr')
-const introduction2Height = document.querySelector('.introduction2').clientHeight
-const introduction2DistanceTop = document.querySelector('.introduction2').offsetTop
+const introduction2Height = document.querySelectorAll('.introduction2').clientHeight
+const introduction2DistanceTop = document.querySelectorAll('.introduction2').offsetTop
 const pic2 = document.querySelector('div.bg2')
 const paragraph2 = document.querySelector('.introduction2 span p')
 const hr2 = document.querySelector('.introduction2 span hr')

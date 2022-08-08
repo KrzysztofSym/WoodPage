@@ -70,16 +70,18 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 			})
 		}
 
-    let buttonRight = document.querySelector('right');
-		let buttonLeft = document.querySelector('left');
+    let buttonRight = document.getElementById('slideRight');
+		let buttonLeft = document.getElementById('slideLeft');
 
 		buttonLeft.addEventListener('click', function(){
-			document.querySelector('slider').scrollLeft -= 180;
-      console.log(buttonLeft)
+			document.querySelectorAll('slider').scrollLeft -= 180;
+      console.log("left");
+
 		})
 
 		buttonRight.addEventListener('click', function(){
-			document.querySelector('slider').scrollLeft += 180
-		})
+			document.querySelectorAll('slider').scrollLeft += 180
+		console.log("right");
+    })
 
 //need to check this file

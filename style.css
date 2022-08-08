@@ -563,13 +563,20 @@ display: block;
     background-color: blue;
 }
 
-.slider {
+/* .slider {
     width: 5400px;
     min-height: 230px;
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     overflow-x: auto;
+} */
+.slider{
+	width: 440px;
+	display: flex;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+
 }
 
 .slider::-webkit-scrollbar {

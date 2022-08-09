@@ -74,13 +74,13 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 		let buttonLeft = document.getElementById('slideLeft');
 
 		buttonLeft.addEventListener('click', function(){
-			document.querySelectorAll('slider').scrollLeft -= 180;
+			document.getElementById('slider').scrollLeft -= 500;
       console.log("left");
 
 		})
 
 		buttonRight.addEventListener('click', function(){
-			document.querySelectorAll('slider').scrollLeft += 180
+			document.getElementById('slider').scrollLeft += 500
 		console.log("right");
     })
 

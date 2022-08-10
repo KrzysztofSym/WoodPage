@@ -84,4 +84,4 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 		console.log("right");
     })
 
-//need to check this file
+

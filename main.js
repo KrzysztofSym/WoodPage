@@ -57,8 +57,8 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 
 		for (let i=0; i < thumbnails.length; i++){
 
-			thumbnails[i].addEventListener('mouseover', function(){
-				console.log(activeImages)
+			thumbnails[i].addEventListener(/*'mouseover'*/'click', function(){
+				// console.log(activeImages)
 
 				if (activeImages.length > 0){
 					activeImages[0].classList.remove('active')

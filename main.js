@@ -64,7 +64,6 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 					activeImages[0].classList.remove('active')
 				}
 
-
 				this.classList.add('active')
 				document.getElementById('featured').src = this.src
 			})
@@ -72,16 +71,20 @@ let thumbnails = document.getElementsByClassName('thumbnail')
 
     let buttonRight = document.getElementById('slideRight');
 		let buttonLeft = document.getElementById('slideLeft');
-
+    let sliderDimension = thumbnails[0].getBoundingClientRect();
+    let sliderWidth = sliderDimension.width;
+    
 		buttonLeft.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft -= 500;
+      document.getElementById('slider').scrollLeft -= sliderWidth;
       console.log("left");
+      console.log(sliderWidth);
 
 		})
 
 		buttonRight.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft += 500
+			document.getElementById('slider').scrollLeft += sliderWidth
 		console.log("right");
+    console.log(sliderWidth);
     })
 
 

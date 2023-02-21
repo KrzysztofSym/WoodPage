@@ -52,39 +52,62 @@ window.addEventListener("scroll", imgSlide);
 
 // Cabinet slider
 let thumbnails = document.getElementsByClassName('thumbnail')
-
-		let activeImages = document.getElementsByClassName('active')
+let activeImages = document.getElementsByClassName('active')
 
 		for (let i=0; i < thumbnails.length; i++){
-
-			thumbnails[i].addEventListener(/*'mouseover'*/'click', function(){
-				// console.log(activeImages)
-
+      thumbnails[i].addEventListener(/*'click'*/'mouseover', function(){
+       let timer = setTimeout(function() {
 				if (activeImages.length > 0){
 					activeImages[0].classList.remove('active')
 				}
-
-				this.classList.add('active')
-				document.getElementById('featured').src = this.src
-			})
+				thumbnails[i].classList.add('active')
+				document.getElementById('featured').src = thumbnails[i].src;
+     }, 500);
+     thumbnails[i].addEventListener(/*'click'*/'mouseleave', function(){   
+      clearTimeout(timer);
+    });
+      });
 		}
 
+    
     let buttonRight = document.getElementById('slideRight');
 		let buttonLeft = document.getElementById('slideLeft');
     let sliderDimension = thumbnails[0].getBoundingClientRect();
     let sliderWidth = sliderDimension.width;
+  
+
     
-		buttonLeft.addEventListener('click', function(){
-      document.getElementById('slider').scrollLeft -= sliderWidth;
-      console.log("left");
-      console.log(sliderWidth);
+		// buttonLeft.addEventListener('click', function(){
+    //   document.getElementById('slider').scrollLeft -= sliderWidth;
+    //   console.log("left");
+    //   console.log(sliderWidth);
 
-		})
+		// })
 
-		buttonRight.addEventListener('click', function(){
-			document.getElementById('slider').scrollLeft += sliderWidth
-		console.log("right");
-    console.log(sliderWidth);
+		// buttonRight.addEventListener('click', function(){
+		// 	document.getElementById('slider').scrollLeft += sliderWidth
+		// console.log("right");
+    // console.log(sliderWidth);
+    // })
+
+    // Another option to scroll
+
+    const productContainers = [...document.querySelectorAll('#slider')];
+    const nxtBtn = [...document.querySelectorAll('.right')];
+    const preBtn = [...document.querySelectorAll('.left')];
+    
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+        console.log(containerWidth);
+
+    
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+    
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
     })
-
 

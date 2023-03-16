@@ -41,7 +41,7 @@ function imgSlide() {
 
         // console.log(introduction1DistanceTop);
         // console.log(window.innerHeight);
-    };
+    }
 
     if ((scrollSize > (introduction2DistanceTop - window.innerHeight * 0.6)) && (pic2.classList.contains('active') !== true)) {
         pic2.classList.add('activePic')
@@ -51,11 +51,12 @@ function imgSlide() {
 window.addEventListener("scroll", imgSlide);
 
 // Cabinet slider
+// Draggable slider
 let thumbnails = document.getElementsByClassName('thumbnail')
 let activeImages = document.getElementsByClassName('active')
 
 		for (let i=0; i < thumbnails.length; i++){
-      thumbnails[i].addEventListener(/*'click'*/'mouseover', function(){
+      thumbnails[i].addEventListener('mouseover', function(){
        let timer = setTimeout(function() {
 				if (activeImages.length > 0){
 					activeImages[0].classList.remove('active')
@@ -63,51 +64,59 @@ let activeImages = document.getElementsByClassName('active')
 				thumbnails[i].classList.add('active')
 				document.getElementById('featured').src = thumbnails[i].src;
      }, 500);
-     thumbnails[i].addEventListener(/*'click'*/'mouseleave', function(){   
+     thumbnails[i].addEventListener('mouseleave', function(){
       clearTimeout(timer);
     });
       });
 		}
 
-    
-    let buttonRight = document.getElementById('slideRight');
-		let buttonLeft = document.getElementById('slideLeft');
-    let sliderDimension = thumbnails[0].getBoundingClientRect();
-    let sliderWidth = sliderDimension.width;
-  
+const slider = document.getElementById("slider");
+firstImg = slider.querySelectorAll("img")[0];
+arrowIcons = document.querySelectorAll(".fa");
 
-    
-		// buttonLeft.addEventListener('click', function(){
-    //   document.getElementById('slider').scrollLeft -= sliderWidth;
-    //   console.log("left");
-    //   console.log(sliderWidth);
+let isSlideStart = false, prevPageX, prevScrollLeft;
+let firstImgWidth = firstImg.clientWidth + 14; // img widht + 14 margin value
+let scrollWidth = slider.scrollWidth - slider.clientWidth; // getting max scrollable width
 
-		// })
+const showHideIcons = () => {
+  // showing and hiding prev/next icon according to slider scroll left value
+  arrowIcons[0].style.display = slider.scrollLeft == 0 ? "none" : "block";
+  arrowIcons[1].style.display = slider.scrollLeft >= scrollWidth ? "none" : "block";
+//  arrowIcons[1].style.backgroundColor = slider.scrollLeft > 1000 ? "blue" : "yellow";
 
-		// buttonRight.addEventListener('click', function(){
-		// 	document.getElementById('slider').scrollLeft += sliderWidth
-		// console.log("right");
-    // console.log(sliderWidth);
-    // })
+}
 
-    // Another option to scroll
+ arrowIcons.forEach(icon => {
+  icon.addEventListener("click", () => {
+    // if clicek icon is left, reduce width value form the slider scrool left else add to it
+    slider.scrollLeft += icon.id == "slideLeft" ? -firstImgWidth : firstImgWidth;
+    setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
+  });
 
-    const productContainers = [...document.querySelectorAll('#slider')];
-    const nxtBtn = [...document.querySelectorAll('.right')];
-    const preBtn = [...document.querySelectorAll('.left')];
-    
-    productContainers.forEach((item, i) => {
-        let containerDimensions = item.getBoundingClientRect();
-        let containerWidth = containerDimensions.width;
-        console.log(containerWidth);
+ });
 
-    
-        nxtBtn[i].addEventListener('click', () => {
-            item.scrollLeft += containerWidth;
-        })
-    
-        preBtn[i].addEventListener('click', () => {
-            item.scrollLeft -= containerWidth;
-        })
-    })
+ const slideStart = (e) => {
+   isSlideStart = true;
+   prevPageX = e.pageX;
+   prevScrollLeft = slider.scrollLeft;
+ }
+
+const sliding = (e) => {
+  if(!isSlideStart) return;
+  e.preventDefault();
+  slider.classList.add("sliding");
+  let positionDiff = e.pageX - prevPageX;
+  slider.scrollLeft = prevScrollLeft - positionDiff;
+  showHideIcons()
+}
+
+const slideStop = () => {
+  isSlideStart = false;
+  slider.classList.remove("sliding");
+}
+
+slider.addEventListener("mousedown", slideStart);
+slider.addEventListener("mousemove", sliding);
+slider.addEventListener("mouseup", slideStop);
+slider.addEventListener("mouseleave", slideStop);
 

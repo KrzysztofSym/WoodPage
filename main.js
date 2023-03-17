@@ -82,7 +82,6 @@ const showHideIcons = () => {
   // showing and hiding prev/next icon according to slider scroll left value
   arrowIcons[0].style.display = slider.scrollLeft == 0 ? "none" : "block";
   arrowIcons[1].style.display = slider.scrollLeft >= scrollWidth ? "none" : "block";
-//  arrowIcons[1].style.backgroundColor = slider.scrollLeft > 1000 ? "blue" : "yellow";
 
 }
 
@@ -94,10 +93,13 @@ const showHideIcons = () => {
   });
 
  });
+ const autoSlide = () => {
+  console.log("ok");
+ }
 
  const slideStart = (e) => {
    isSlideStart = true;
-   prevPageX = e.pageX;
+   prevPageX = e.pageX || e.touches[0].pageX;
    prevScrollLeft = slider.scrollLeft;
  }
 
@@ -107,16 +109,22 @@ const sliding = (e) => {
   slider.classList.add("sliding");
   let positionDiff = e.pageX - prevPageX;
   slider.scrollLeft = prevScrollLeft - positionDiff;
-  showHideIcons()
+  showHideIcons();
 }
 
 const slideStop = () => {
   isSlideStart = false;
   slider.classList.remove("sliding");
+  autoSlide();
 }
 
 slider.addEventListener("mousedown", slideStart);
-slider.addEventListener("mousemove", sliding);
-slider.addEventListener("mouseup", slideStop);
-slider.addEventListener("mouseleave", slideStop);
+slider.addEventListener("touchstart", slideStart);
+
+document.addEventListener("mousemove", sliding);
+// slider.addEventListener("touchmove", sliding);
+
+document.addEventListener("mouseup", slideStop);
+// slider.addEventListener("mouseleave", slideStop);
+// slider.addEventListener("touchend", slideStop);
 

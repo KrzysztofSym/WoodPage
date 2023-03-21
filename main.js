@@ -74,8 +74,10 @@ const slider = document.getElementById("slider");
 firstImg = slider.querySelectorAll("img")[0];
 arrowIcons = document.querySelectorAll(".fa");
 
-let isSlideStart = false, prevPageX, prevScrollLeft;
-let firstImgWidth = firstImg.clientWidth + 14; // img widht + 14 margin value
+
+let isSlideStart = false, isSliding = false, prevPageX, prevScrollLeft, positionDiff;
+
+let firstImgWidth = (firstImg.clientWidth + 14); // img widht + 14 margin value
 let scrollWidth = slider.scrollWidth - slider.clientWidth; // getting max scrollable width
 
 const showHideIcons = () => {
@@ -87,6 +89,7 @@ const showHideIcons = () => {
 
  arrowIcons.forEach(icon => {
   icon.addEventListener("click", () => {
+    let firstImgWidth = firstImg.clientWidth + 14;
     // if clicek icon is left, reduce width value form the slider scrool left else add to it
     slider.scrollLeft += icon.id == "slideLeft" ? -firstImgWidth : firstImgWidth;
     setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
@@ -94,8 +97,20 @@ const showHideIcons = () => {
 
  });
  const autoSlide = () => {
-  console.log("ok");
- }
+  // if there is no image left to scroll, then returf from here
+  if(slider.scrollLeft == (slider.scrollWidth = slider.clientWidth)) return;
+  positionDiff = Math.abs(positionDiff); // making positionDiff value positive
+  let firstImgWidth = firstImg.clientWidth + 14;
+  let valDifference = firstImgWidth - positionDiff;
+
+  if(slider.scrollLeft > prevScrollLeft) { // scrolling right
+    console.log(valDifference);
+    return slider.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+  } // scrolling left
+  console.log("right"); 
+  slider.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+
+}
 
  const slideStart = (e) => {
    isSlideStart = true;
@@ -106,8 +121,9 @@ const showHideIcons = () => {
 const sliding = (e) => {
   if(!isSlideStart) return;
   e.preventDefault();
+  isSliding = true;
   slider.classList.add("sliding");
-  let positionDiff = e.pageX - prevPageX;
+  positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
   slider.scrollLeft = prevScrollLeft - positionDiff;
   showHideIcons();
 }
@@ -115,6 +131,8 @@ const sliding = (e) => {
 const slideStop = () => {
   isSlideStart = false;
   slider.classList.remove("sliding");
+  if(!isSliding) return;
+  isSliding = false;
   autoSlide();
 }
 
@@ -122,9 +140,9 @@ slider.addEventListener("mousedown", slideStart);
 slider.addEventListener("touchstart", slideStart);
 
 document.addEventListener("mousemove", sliding);
-// slider.addEventListener("touchmove", sliding);
+slider.addEventListener("touchmove", sliding);
 
 document.addEventListener("mouseup", slideStop);
-// slider.addEventListener("mouseleave", slideStop);
-// slider.addEventListener("touchend", slideStop);
+slider.addEventListener("mouseleave", slideStop);
+slider.addEventListener("touchend", slideStop);
 

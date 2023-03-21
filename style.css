@@ -597,7 +597,7 @@ display: block;
 #slider img {
     height: 22rem;
     object-fit: cover;
-    width: calc(100% / 4);
+    width: calc((100% / 4));
     margin-left: 14px;
 }
 
@@ -631,3 +631,14 @@ display: block;
 .fa:last-child {
     right: -0.8em;
 }
+
+@media screen and (max-width: 900px) {
+    #slider img{
+      width: calc(100% / 2);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    #slider img{
+      width: 100%;
+    }
+  }

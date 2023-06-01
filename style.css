@@ -552,12 +552,16 @@ display: block;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    /* max-width: 1000px; */
     flex-wrap: wrap;
+    gap: 7px; /* because #slider.img margin has 14px, we have invisible break line so we have to divide it by 2 */
 }
+.break-column {
+    flex-basis: 100%;
+    width: 0;
+  }
 
 #featured {
-    
-    /* max-width: 500px; */
     max-height: 600px;
     object-fit: cover;
     cursor: pointer;
@@ -566,6 +570,7 @@ display: block;
 
 .slideWrapper {
     max-width: 1000px;
+    /* margin: auto; */
     position: relative;
     /* display: flex;
     flex-wrap: nowrap; */
@@ -595,7 +600,8 @@ display: block;
 }
 
 #slider img {
-    height: 22rem;
+    /* height: 22rem; */
+    height: 352px;
     object-fit: cover;
     width: calc((100% / 4));
     margin-left: 14px;

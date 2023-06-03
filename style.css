@@ -559,7 +559,22 @@ display: block;
 .break-column {
     flex-basis: 100%;
     width: 0;
-  }
+}
+.cabinet-description {
+    max-width: 400px;
+    margin-right: 2rem;
+    flex-grow: 0.3;
+}
+.cabinetsH1 {
+    font-size: 2rem;
+    line-height: 2em;
+}
+.cabinet-information {
+    font-size: 1.5rem;
+}
+.cabinetsH1 {
+   text-align: center;
+   }
 
 #featured {
     max-height: 600px;
@@ -572,13 +587,7 @@ display: block;
     max-width: 1000px;
     /* margin: auto; */
     position: relative;
-    /* display: flex;
-    flex-wrap: nowrap; */
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; */
-}
+   }
 
 #slider {
     font-size: 0;

@@ -476,8 +476,7 @@ footer ul li a {
 .topService {
     display: flex;
     max-width: 1600px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
+    margin: 4rem auto;
     width: 100%;
     position: relative;
 }
@@ -530,14 +529,13 @@ footer ul li a {
 .introServices {
     min-height: 90vh;
     padding: auto 5rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* Cabinets */
-.cabinets {
+.service-type {
 padding: 0 5rem;
 }
 
@@ -555,6 +553,7 @@ display: block;
     /* max-width: 1000px; */
     flex-wrap: wrap;
     gap: 7px; /* because #slider.img margin has 14px, we have invisible break line so we have to divide it by 2 */
+    margin-bottom: 4rem;
 }
 .break-column {
     flex-basis: 100%;
